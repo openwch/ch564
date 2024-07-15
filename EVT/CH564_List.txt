@@ -1,0 +1,102 @@
+
+南京沁恒微电子股份有限公司 2024.07
+最新资料请到我们的网站上查询
+https://wch.cn
+
+
+文件目录
+  |
+  |-- CH564:RISC-V内核微控制器
+  |     |-- EVT
+  |     |     |---PUB
+  |     |     |     |-- CH564XSCH.pdf:CH564评估板原理图
+  |     |     |     |-- CH564评估板说明书.pdf:CH564评估板说明及工程创建说明
+  |     |     |     |-- SCHPCB:CH564评估板原理图和PCB原文件
+  |     |     |---EXAM
+  |     |     |     |--ADC
+  |     |     |     |     |-- ADC:ADC轮询读取采样例程
+  |     |     |     |     |-- ADC_DMA:ADC使用DMA采样例程
+  |     |     |     |--ETH
+  |     |     |     |     |-- NetLib：网络协议栈库 
+  |     |     |     |     |-- MAC RAW 示例，演示 MAC RAW 接收和发送数据。
+  |     |     |     |     |-- TcpClient：演示Tcp client连接服务器后接收数据再回传
+  |     |     |     |     |-- TcpServer：演示Tcp Server连接到客户端后接收数据并回传
+  |     |     |     |     |-- UdpClient：演示Udp Client接收数据并回传
+  |     |     |     |     |-- UdpServer：演示Udp Server接收数据并回传
+  |     |     |     |--FLASH
+  |     |     |     |     |-- Flash_Program:Flash读写校验例程
+  |     |     |     |--FreeRTOS：FreeRTOS移植例程
+  |     |     |     |     |-- FreeRTOS_Core：移植FreeRTOS例程
+  |     |     |     |--GPIO
+  |     |     |     |     |-- GPIO_Interrupt:外部中断例程
+  |     |     |     |     |-- GPIO_Toggle:GPIO翻转例程
+  |     |     |     |--HarmonyOS
+  |     |     |     |     |-- LiteOS_m：HarmonyOS移植例程
+  |     |     |     |--I2C
+  |     |     |     |     |-- I2C_10bit_Mode:10位地址模式，Master/Slave 模式收发例程
+  |     |     |     |     |-- I2C_7bit_Interrupt_Mode:使用中断进行收发例程 
+  |     |     |     |     |-- I2C_7bit_Mode:7位地址模式，Master/Slave 模式收发例程
+  |     |     |     |     |-- I2C_EEPROM:I2C接口操作EEPROM外设例程
+  |     |     |     |--IAP：IAP升级例程-内置Hex转Bin工具和IAP升级工具
+  |     |     |     |     |--IAP:USB+UART IAP例程
+  |     |     |     |     |--APP:APP例程
+  |     |     |     |--ICache
+  |     |     |     |     |-- ICache:ICache例程
+  |     |     |     |--PARA
+  |     |     |     |     |-- SLV_DMA:被动并口DMA传输例程
+  |     |     |     |     |-- SLV_RST:被动并口命令字复位例程
+  |     |     |     |--PWR
+  |     |     |     |     |-- DeepSleep_Mode:深度睡眠例程
+  |     |     |     |     |-- Sleep_Mode:睡眠例程
+  |     |     |     |--RCC
+  |     |     |     |     |-- POWER:时钟开关例程
+  |     |     |     |--SPI
+  |     |     |     |     |-- SPI0_DMA:SPI使用DMA，Master/Slave 模式收发例程
+  |     |     |     |     |-- SPI0_FLASH:SPI接口操作FLASH外设例程
+  |     |     |     |     |-- SPI0_FullDuplex:双线全双工模式，Master 模式数据收发
+  |     |     |     |     |-- SPI0_halfduplex:双线半双工模式，Master/Slave 模式数据收发
+  |     |     |     |--SRC
+  |     |     |     |     |-- Core:内核系统头文件
+  |     |     |     |     |-- Debug:延时函数、串口调试源文件及头文件
+  |     |     |     |     |-- Ld:ld文件  
+  |     |     |     |     |-- Peripheral:基本外设驱动源文件及头文件
+  |     |     |     |     |-- Startup:启动文件
+  |     |     |     |--SYSTICK
+  |     |     |     |     |-- Systick_interrupt:滴答定时器例程
+  |     |     |     |--TencentOS 
+  |     |     |     |     |-- TencentOS：TencentOS移植例程
+  |     |     |     |--TMR
+  |     |     |     |     |-- Capture:输入捕获例程
+  |     |     |     |     |-- Capture_DMA:输入捕获（通过DMA）例程
+  |     |     |     |     |-- COUNT:计数器例程
+  |     |     |     |     |-- PWM:PWM输出例程
+  |     |     |     |     |-- PWM_DMA:定时器使用DMA例程
+  |     |     |     |     |-- TMR_Interrupt:定时器中断例程
+  |     |     |     |--UART
+  |     |     |     |     |-- UART_DMA:UART使用DMA收发例程
+  |     |     |     |     |-- UART_Interrupt:UART使用中断收发例程
+  |     |     |     |     |-- UART_Polling:UART轮询收发例程
+  |     |     |     |     |-- UART_Printf:串口打印调试例程
+  |     |     |     |--USB
+  |     |     |     |     |-- DEVICE
+  |     |     |     |     |     |-- CH372Device:模拟自定义USB设备（CH372设备），端点1，3下传，2，4上传，端点1下传的数据从端点3上传，不取反，端点2下传的数据从端点4上传，取反。
+  |     |     |     |     |     |-- CompatibilityHID:模拟HID设备，数据通过串口上下传
+  |     |     |     |     |     |-- CompositeKM:模拟键盘和鼠标，使用IO模拟按键，同时模拟数据可以通过串口2上传。
+  |     |     |     |     |     |-- MSC_CD-ROM: 模拟CDROM例程，需要外挂SPI-Flash
+  |     |     |     |     |     |-- MSC_U-Disk: 模拟简单U盘，可选使用片内Flash或外部SPI-Flash
+  |     |     |     |     |     |-- SimulateCDC:模拟一个CDC串口，使用串口2收发。
+  |     |     |     |     |     |-- SimulateCDC-HID:模拟一个CDC串口，使用串口2收发,HID中断端点下发数据取反上传。
+  |     |     |     |     |--HOST_IAP
+  |     |     |     |     |     |-- APP: 与HOST_IAP配套使用的APP，工程修改了程序起始位置，编译后需自行将文件转化为bin文件并重命名为APP.bin
+  |     |     |     |     |     |-- HOST_IAP:  基于U盘读取文件例程整理的主机U盘IAP例程，从U盘内读取名称位APP.bin的文件，写入内部flash，校验后自动跳转。
+  |     |     |     |     |-- HOST_KM: 主机操作键鼠，获取键鼠上传的端点的数据并打印，支持U口下1级hub
+  |     |     |     |     |-- HOST_MTP_FileSystem:枚举过程的USB主机到一个支持MTP和PTP协议的设备，支持MTP和PTP协议，并读取其文件
+  |     |     |     |     |-- Host_UDisk_Exams:USB主机操作U盘例程
+  |     |     |     |     |-- Udisk_Lib:U盘文件系统库文件
+  |     |     |     |--USBPD
+  |     |     |     |     |-- USBPD_SNK:PD SNK 例程
+  |     |     |     |     |-- USBPD_SRC:PD SRC 例程  
+  |     |     |     |--WDOG
+  |     |     |     |     |-- WDOG:看门狗例程
+  |     |     |     |--XBUS
+  |     |     |     |     |-- XBUS:并口例程

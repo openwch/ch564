@@ -1,0 +1,17 @@
+Vendor=WCH
+Toolchain=RISC-V
+Series=CH564
+RTOS=NoneOS
+MCU=CH564L
+Link=WCH-Link
+PeripheralVersion===1.0
+Description===CH564 is an industrial-grade microcontroller based on barley RISC-V core design. CH564 built-in USBHS PHY and PD PHY, support for USB Host host and USB Device device functions, PDUSB and Type-C fast charging; built-in Ethernet controller MAC and 10 megabits/100 megabits physical layer transceiver; provides an external bus interface XBUS, 8-bit passive parallel port SLV, 12-bit analogue-to-digital converter ADC, multi-group timer, 4-group UART serial port, I2C interface, 2 SPI interface and other rich peripheral resources. 
+Mcu Type=CH564
+Address=0x00000000
+CLKSpeed=1
+DebugInterfaceMode=0
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+SDIPrintf=false

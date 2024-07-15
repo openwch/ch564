@@ -1,0 +1,102 @@
+
+Nanjing Qinheng Microelectronics Co., Ltd. 2024.07
+Please check our website for the latest information.
+https://wch-ic.com
+
+
+Directory
+  |
+  |-- CH564:RISC-V core microcontroller
+  |     |-- EVT
+  |     |     |---PUB
+  |     |     |     |-- CH564XSCH.pdf:CH564 Evaluation Board Schematic
+  |     |     |     |-- CH564 Evaluation Board Manual.pdf:CH564 Evaluation Board Description and Project Creation Instructions
+  |     |     |     |-- SCHPCB:CH564 Evaluation Board Schematic and Original PCB Files
+  |     |     |---EXAM
+  |     |     |     |--ADC
+  |     |     |     |     |-- ADC:ADC Polling Read Sample Routine
+  |     |     |     |     |-- ADC_DMA:ADC Sampling Routine Using DMA
+  |     |     |     |--ETH
+  |     |     |     |     |-- NetLib: Network protocol stack library file
+  |     |     |     |     |-- TcpClient: demonstration routine that TCP client receives data after connecting to the server and then returns data 
+  |     |     |     |     |-- TcpServer: demonstration routine that TCP server receives data after connecting to the client and then returns data
+  |     |     |     |     |-- UdpClient: demonstration routine that Udp Client receives data and returns data
+  |     |     |     |     |-- UdpServer: demonstration routine that Udp Server receives data and returns data
+  |     |     |     |     |-- MAC_RAW: MAC RAW example, demonstrating that MAC RAW receives and sends data.
+  |     |     |     |--FLASH
+  |     |     |     |     |-- Flash_Program:Flash Read/Write Checksum Routine
+  |     |     |     |--FreeRTOS
+  |     |     |     |     |-- FreeRTOS_Core:FreeRTOS migration routines
+  |     |     |     |--HarmonyOS
+  |     |     |     |     |-- LiteOS_m：HarmonyOS migration routine
+  |     |     |     |--GPIO
+  |     |     |     |     |-- GPIO_Interrupt:External Interrupt Routines
+  |     |     |     |     |-- GPIO_Toggle:GPIO flip-flop routines
+  |     |     |     |--I2C
+  |     |     |     |     |-- I2C_10bit_Mode:10-bit address mode, Master/Slave mode send/receive routines
+  |     |     |     |     |-- I2C_7bit_Interrupt_Mode:Send/receive routines using interrupts 
+  |     |     |     |     |-- I2C_7bit_Mode:7-bit address mode, Master/Slave mode send/receive routines
+  |     |     |     |     |-- I2C_EEPROM:I2C Interface Operation of EEPROM Peripheral Routines
+  |     |     |     |--IAP: IAP upgrade routine, including the Hex to Bin tool and IAP upgrade tool
+  |     |     |     |     |--IAP: USB+UART IAP routine
+  |     |     |     |     |--APP: APP routine
+  |     |     |     |--ICache
+  |     |     |     |     |-- ICache:ICache routines
+  |     |     |     |--PARA
+  |     |     |     |     |-- SLV_DMA:Passive Parallel Port Transmission by DMA Routine
+  |     |     |     |     |-- SLV_RST:Passive Parallel Port Reset Controled by Command Word Routine
+  |     |     |     |--PWR
+  |     |     |     |     |-- DeepSleep_Mode:Deep Sleep Routine
+  |     |     |     |     |-- Sleep_Mode:Sleep routines
+  |     |     |     |--RCC
+  |     |     |     |     |-- POWER:Clock Switch Routines
+  |     |     |     |--SPI
+  |     |     |     |     |-- SPI0_DMA:SPI using DMA, Master/Slave mode send/receive routines
+  |     |     |     |     |-- SPI0_FLASH:SPI Interface Operation of FLASH Peripheral Routines
+  |     |     |     |     |-- SPI0_FullDuplex:Dual-wire full-duplex mode, Master mode data sending and receiving
+  |     |     |     |     |-- SPI0_halfduplex:Dual-wire half-duplex mode, Master/Slave mode data sending and receiving
+  |     |     |     |--SRC
+  |     |     |     |     |-- Core:kernel system header file
+  |     |     |     |     |-- Debug:Delay functions, serial port debugging source files and header files
+  |     |     |     |     |-- Ld:ld file  
+  |     |     |     |     |-- Peripheral:Basic peripheral driver source and header files
+  |     |     |     |     |-- Startup:startup file
+  |     |     |     |--SYSTICK
+  |     |     |     |     |-- Systick_interrupt:Tick Timer Routine
+  |     |     |     |--TencentOS 
+  |     |     |     |     |-- TencentOS：TencentOS migration routine
+  |     |     |     |--TMR
+  |     |     |     |     |-- Capture:Input Capture Routine
+  |     |     |     |     |-- Capture_DMA:Input Capture (via DMA) Routine
+  |     |     |     |     |-- COUNT:Counter Routines
+  |     |     |     |     |-- PWM:PWM Output Routine
+  |     |     |     |     |-- PWM_DMA:Timer using DMA routines
+  |     |     |     |     |-- TMR_Interrupt:Timer Interrupt Routine
+  |     |     |     |--UART
+  |     |     |     |     |-- UART_DMA:UART using DMA send and receive routines
+  |     |     |     |     |-- UART_Interrupt:UART using interrupt send/receive routines
+  |     |     |     |     |-- UART_Polling:UART Polling Transceiver Routine
+  |     |     |     |     |-- UART_Printf:Serial Printing Debugging Routines
+  |     |     |     |--USB
+  |     |     |     |     |-- DEVICE
+  |     |     |     |     |     |-- CH372Device:Simulate a custom USB device (CH372 device) with endpoints 1,3 downlinked and 2,4 uplinked. Endpoint 1 downlinked data is uploaded from endpoint 3 without inversion, and endpoint 2 downlinked data is uploaded from endpoint 4 with inversion.
+  |     |     |     |     |     |-- CompatibilityHID:Analog HID device, data up and down via serial port
+  |     |     |     |     |     |-- CompositeKM:Emulates keyboard and mouse, using IO to simulate keystrokes, while analog data can be uploaded through serial port 2.
+  |     |     |     |     |     |-- MSC_CD-ROM:Analog CDROM routines, requires external SPI-Flash
+  |     |     |     |     |     |-- MSC_U-Disk:Simple USB flash drive emulation with optional on-chip Flash or external SPI-Flash
+  |     |     |     |     |     |-- SimulateCDC:Simulate a CDC serial port to send and receive using serial port 2.
+  |     |     |     |     |     |-- SimulateCDC-HID:Simulate a CDC serial port, use serial port 2 to send/receive, HID interrupt endpoints to send down data to upload inverse.
+  |     |     |     |     |--HOST_IAP
+  |     |     |     |     |     |-- APP: For the APP used with HOST_IAP, the project has modified the starting location of the program, after compilation, you need to convert the file into a bin file and rename it as APP.bin.
+  |     |     |     |     |     |-- HOST_IAP:  The host USB flash drive IAP routine organized based on the USB flash drive read file routine reads the file with the name bit APP.bin from inside the USB flash drive, writes it to the internal flash, and automatically jumps to it after checking.
+  |     |     |     |     |-- HOST_KM: The host operates the keyboard and mouse, obtains the data of the endpoint uploaded by the keyboard and mouse and prints it, and supports the level 1 hub under the U port.
+  |     |     |     |     |-- HOST_MTP_FileSystem:Enumeration process of a USB host to a device that supports MTP and PTP protocols and reads its files
+  |     |     |     |     |-- Host_UDisk_Exams:USB Host Operation USB Flash Drive Routine
+  |     |     |     |     |-- Udisk_Lib:USB flash drive file system library file
+  |     |     |     |--USBPD
+  |     |     |     |     |-- USBPD_SNK:PD SNK Routine
+  |     |     |     |     |-- USBPD_SRC:PD SRC Routine  
+  |     |     |     |--WDOG
+  |     |     |     |     |-- WDOG:watchdog routine
+  |     |     |     |--XBUS
+  |     |     |     |     |--XBUS:parallel port routine
