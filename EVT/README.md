@@ -1,4 +1,4 @@
-# Datasheet and Reference and Core Manual
+# CH564-EVT
 
 EN | [中文](README_zh.md)
 
